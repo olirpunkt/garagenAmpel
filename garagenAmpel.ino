@@ -80,7 +80,7 @@ void setup_wifi() {
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Reconnecting...");
-    if (!client.connect("TrafficLight")) {
+    if (!client.connect("TrafficLight", "cheffe", "wikiwins")) {
       Serial.print("Failed, rd=");
       Serial.print(client.state());
       Serial.println(" retrying in 5 seconds");
